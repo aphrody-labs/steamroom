@@ -15,7 +15,7 @@ prost-types = "0.14"
 prost-build = "0.14"
 reqwest = { version = "0.13", features = ["json", "http2"] }
 flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
-zip = { version = "8", default-features = false, features = ["deflate"] }
+zip = { version = "9", default-features = false, features = ["deflate"] }
 zstd = "0.13"
 lzma-rs = "0.3"
 aes = "0.9"
@@ -62,5 +62,5 @@ ratatui = "0.29"
 rkyv = { version = "0.8", features = ["bytecheck"] }
 tokio-util = "0.7"
 
-steamroom = { version = "0.2.0", path = "crates/steamroom" }
-steamroom-client = { version = "0.2.0", path = "crates/steamroom-client" }
+steamroom = { version = "0.2.1", path = "crates/steamroom" }
+steamroom-client = { version = "0.2.1", path = "crates/steamroom-client" }
