@@ -13,6 +13,9 @@ static INSTALL: Once = Once::new();
 /// Install the compile-time-selected rustls crypto provider as the process
 /// default, at most once. Idempotent; safe to call from every connection path.
 ///
+/// With neither feature enabled this does nothing: the host application installs the provider
+/// (nie installs rustls-graviola), and `ClientConfig` builders read the process default.
+///
 /// `install_default` returns `Err` when a default is already set (for example
 /// installed by the host application); that is the intended outcome and is
 /// ignored.
@@ -24,6 +27,3 @@ pub fn ensure_crypto_provider() {
         let _ = rustls::crypto::aws_lc_rs::default_provider().install_default();
     });
 }
-
-#[cfg(not(any(feature = "ring", feature = "aws-lc-rs")))]
-compile_error!("steamroom requires a rustls crypto provider: enable the `ring` (default) or `aws-lc-rs` feature");
