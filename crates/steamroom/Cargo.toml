@@ -12,7 +12,7 @@ keywords = ["steam", "valve", "depot", "cdn", "download"]
 categories = ["api-bindings", "network-programming"]
 
 [features]
-default = ["ring"]
+default = []
 serde = []
 __private_fuzzing = []
 

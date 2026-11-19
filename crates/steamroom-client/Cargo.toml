@@ -12,7 +12,7 @@ keywords = ["steam", "depot", "download", "delta", "patching"]
 categories = ["network-programming"]
 
 [features]
-default = ["ring"]
+default = []
 serde = ["steamroom/serde"]
 
 # rustls crypto provider selection, forwarded to steamroom.
